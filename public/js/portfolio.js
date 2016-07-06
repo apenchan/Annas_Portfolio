@@ -41,7 +41,10 @@ var AboutMe = React.createClass({
 	}
 });
 
-// var ProjectA = React.createClass({
+// var NavBar = React.createClass({
+// 	getInitialState: function(){
+		
+// 	},
 // 	render: function(){
 // 		return (
 

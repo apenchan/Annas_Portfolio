@@ -5,8 +5,16 @@
 }
 img {
 	border-radius: 100em;
-	margin-left: 20em;
-	padding: 35px;
+	margin-left: 16em;
+	padding: 14px;
+}
+#content-container {
+	padding: 5px;
+}
+.projects {
+	float: left;
+	margin-left: 30px;
+	font-size: 20px;
 }
 ul {
 	list-style-type: none;
@@ -17,6 +25,7 @@ ul {
 }
 .about-me {
 	float: right;
-	margin-right: 19em;
-	width: 12em;
+	margin-right: 16em;
+	width: 11em;
+	padding-top: 30px;
 }
