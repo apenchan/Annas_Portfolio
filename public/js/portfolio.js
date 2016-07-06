@@ -1,12 +1,6 @@
 console.log("test test");
 
-// var Nav = React.createClass ({
-// 	render: function(){
-// 		return (
-
-// 		)
-// 	}
-// })
+// var image = "http://bit.ly/29olAcb"
 
 var PortfolioDisplay = React.createClass({
 	render: function(){
@@ -28,6 +22,14 @@ var PortfolioDisplay = React.createClass({
 		);
 	}
 });
+
+// var Image = React.createClass({
+// 	render: function(){
+// 		return (
+// 			<img src={this.state.image} alt=""/>
+// 			);
+// 	}
+// });
 
 var AboutMe = React.createClass({
 	render: function(){
