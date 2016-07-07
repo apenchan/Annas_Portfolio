@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-router.get("/", function(req, res){
+router.get("/project-a", function(req, res){
 	console.log("I am working!");
-	res.send("I am here world!");
+	// res.send(user);
 });
 
 module.exports = router;

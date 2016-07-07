@@ -5,7 +5,7 @@ console.log("test test");
 var PortfolioDisplay = React.createClass({
 	getInitialState: function(){
 		return {
-			showProjectA: true,
+			showProjectA: false,
 			showProjectB: false
 		};
 	},
@@ -19,20 +19,34 @@ var PortfolioDisplay = React.createClass({
 	render: function(){
 		return (
 			<ul>
-			<li className="title-name">
-			Anna Penchansky
-			</li>
-			<li className="github">
-			github.com/apenchan
-			</li>
-			<li className="email">
-			a.penchansky@gmail.com
-			</li>
-			<li className="number">
-			561.662.0891
-			</li>
+				<li className="title-name">
+				Anna Penchansky
+				</li>
+				<li className="github">
+				github.com/apenchan
+				</li>
+				<li className="email">
+				a.penchansky@gmail.com
+				</li>
+				<li className="number">
+				561.662.0891
+				</li>
+			<li className={this.state.showProjectA}>
+			<ProjectALink
+			handleProjectA={this.handleProjectA}/></li>
 			</ul>
+
 		);
+	}
+});
+
+var AboutMe = React.createClass({
+	render: function(){
+		return (
+			<p className="about-me">
+			Welcome to my about me and my name is Anna! I am currently a junior web developer and have a passion for cooking, video editing, and puppies. I have a history of tech work and would love to out-bowl you any day!
+			</p>
+			);
 	}
 });
 
@@ -40,7 +54,7 @@ var ProjectALink = React.createClass({
 	getProjectAInfo: function(){
 		console.log("getting project A!");
 		$.ajax({
-			url: '/portfolio/projecta/',
+			url: '/portfolio/project-a/',
 			method: 'GET',
 			success: function(data){
 				console.log("here lies project A" + data);
@@ -65,7 +79,7 @@ var ProjectBLink = React.createClass({
 	getProjectBInfo: function(){
 		console.log("getting project B!");
 		$.ajax({
-			url: '/portfolio/projectb/',
+			url: '/portfolio/project-b/',
 			method: 'GET',
 			success: function(data){
 				console.log("here lies project B" + data);
@@ -94,15 +108,6 @@ var ProjectBLink = React.createClass({
 // 	}
 // });
 
-var AboutMe = React.createClass({
-	render: function(){
-		return (
-			<p className="about-me">
-			Welcome to my about me and my name is Anna! I am currently a junior web developer and have a passion for cooking, video editing, and puppies. I have a history of tech work and would love to out-bowl you any day!
-			</p>
-			);
-	}
-});
 
 // var NavBar = React.createClass({
 // 	getInitialState: function(){
@@ -119,7 +124,6 @@ ReactDOM.render(
 	<div>
 	<PortfolioDisplay/>
 	<AboutMe/>
-	<ProjectALink/>
 	<ProjectBLink/>
 	</div>,
 	document.getElementById("content-container")
